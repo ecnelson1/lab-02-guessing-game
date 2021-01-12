@@ -1,9 +1,9 @@
 # lab-02-guessing-game
 HTML Setup
-1. number input
-2. button
-3. guesses remaining span
-4. too high/low span
+<!-- 1. number input -->
+<!-- 2. button -->
+<!-- 3. guesses remaining span -->
+<!-- 4. too high/low span -->
 stretch:
 1. Reset button
 
