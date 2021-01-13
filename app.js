@@ -1,18 +1,25 @@
 // import functions and grab DOM elements
 const spanRemianGuess = document.getElementById('remain-guess');
 const guess = document.getElementById('user-in');
-const subButton = document.getElementById('sub-button'); 
-import { guessAnalyzer } from './utils.js';
+export const subButton = document.getElementById('sub-button');
+const newGame = document.getElementById('new-game'); 
+import { userOut} from './utils.js';
+import { compareNumbers } from './utils.js';
 import { guessTrack } from './utils.js';
-
 // initialize state
-spanRemianGuess.textContent = `You Have ${remainGuess} Guesses Remaining!`;
 let remainGuess = 4;
+spanRemianGuess.textContent = `You Have ${remainGuess} Guesses Remaining!`;
 
 // set event listeners to update state and DOM
 subButton.addEventListener('click', () => { 
     --remainGuess;
-    guessAnalyzer(guess);
+    compareNumbers(guess);
     guessTrack(remainGuess);  
     spanRemianGuess.textContent = `You Have ${remainGuess} Guesses Remaining!`;
+});
+newGame.addEventListener('click', ()=> {
+    remainGuess = 4;
+    spanRemianGuess.textContent = `New game! you have ${remainGuess} remaining!`;
+    userOut.textContent = 'New Game Initiated';
+    subButton.disabled = false;
 });
