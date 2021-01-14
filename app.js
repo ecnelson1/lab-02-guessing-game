@@ -20,4 +20,5 @@ newGame.addEventListener('click', ()=> {
     spanRemianGuess.textContent = `New game! you have ${remainGuess} remaining!`;
     userOut.textContent = 'New Game Initiated';
     subButton.disabled = false;
+    guess.disabled = false;
 });

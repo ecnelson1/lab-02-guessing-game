@@ -1,7 +1,7 @@
 const spanRemianGuess = document.getElementById('remain-guess');
 export const userOut = document.getElementById('user-out');
 const guess = document.getElementById('user-in');
-import {subButton} from './app.js';
+import { subButton } from './app.js';
 // initialize state
 let correctNumber = Math.ceil(Math.random() * 20);
 let remainGuess = 4;
