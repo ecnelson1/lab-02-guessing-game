@@ -3,10 +3,10 @@ export const userOut = document.getElementById('user-out');
 const guess = document.getElementById('user-in');
 import { subButton } from './app.js';
 // initialize state
-let correctNumber = Math.ceil(Math.random() * 20);
+
 let remainGuess = 4;
 
-export function compareNumbers(){
+export function compareNumbers(correctNumber){
     if (guess.value > correctNumber){ userOut.textContent = 'TOO High'; } 
     else if (guess.value < correctNumber){ userOut.textContent = 'TOO LOW'; } 
     else { userOut.textContent = `Congratulations! you guessed ${correctNumber} and were correct!`;
