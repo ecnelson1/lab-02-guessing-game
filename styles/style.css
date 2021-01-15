@@ -19,7 +19,9 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: black;
+    font-weight: bolder;
+    color: chartreuse;
 }
 
 main {
@@ -43,6 +45,36 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+}
+
+.main-section {
+    border: 2px solid black;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.displayRes {
+    border: 2px dotted chartreuse;
+    width: 40%;
+}
+
+.guess {
+    height: 50px;
+    text-align: center;
+    font-size: larger;
+    font-family: fantasy;
+    color: chartreuse;
+    background-color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+button {
+    margin: 20px;
 }
 
 header {

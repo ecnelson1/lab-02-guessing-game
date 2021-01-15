@@ -14,29 +14,26 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+       
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
             <h1>
                 Can you guess my number?
             </h1>
             <section class="guessRemain" id="remain-guess"></section>
             <section class="displayRes" id="user-out"></section>
             <input type="number" class="guess" id="user-in">
-            <button class="subButton" id="sub-button">SUBMIT</button>
-            <button id="new-game">New Game</button>
 
-
+            <div class = 'buttonContainer'>
+                <button class="subButton" id="sub-button">SUBMIT</button>
+                <button id="new-game">New Game</button>    
+            </div>
            
-
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2020 my guessing game</div>
     </footer>
 
     <script type="module" src="app.js"></script>
