@@ -3,17 +3,16 @@ const spanRemianGuess = document.getElementById('remain-guess');
 const guess = document.getElementById('user-in');
 export const subButton = document.getElementById('sub-button');
 const newGame = document.getElementById('new-game'); 
-import { userOut} from './utils.js';
-import { compareNumbers } from './utils.js';
-import { guessTrack } from './utils.js';
+import { userOut, compareNumbers, guessTrack } from './utils.js';
 // initialize state
 let remainGuess = 4;
+let correctNumber = Math.ceil(Math.random() * 20);
 spanRemianGuess.textContent = `You Have ${remainGuess} Guesses Remaining!`;
 
 // set event listeners to update state and DOM
 subButton.addEventListener('click', () => { 
     --remainGuess;
-    compareNumbers(guess);
+    compareNumbers(correctNumber);
     guessTrack(remainGuess);  
     spanRemianGuess.textContent = `You Have ${remainGuess} Guesses Remaining!`;
 });
@@ -22,4 +21,7 @@ newGame.addEventListener('click', ()=> {
     spanRemianGuess.textContent = `New game! you have ${remainGuess} remaining!`;
     userOut.textContent = 'New Game Initiated';
     subButton.disabled = false;
+    guess.disabled = false;
+    correctNumber = Math.ceil(Math.random() * 20);
+
 });
